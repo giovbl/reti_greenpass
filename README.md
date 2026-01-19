@@ -20,3 +20,39 @@ Similar to the Green Pass verification phase, in both the validation/invalidatio
 The project implements a single client (for both the user and the vaccinal centre) capable of requesting the four operations necessary for Green Pass's management.
 
 ![Architecture visualization](architecture.png)
+
+## Protocol
+
+### Request
+A basic request operation performs this operations:
+
+![Basic request](req_basic.png)
+
+
+In case of a request that needs additional data to be sent:
+
+![Extended request](req_extended.png)
+
+### Request codes
+
+| Code | Name | Description
+| ----------- | ----------- | ----------- |
+| 0 | Verify | Verify a validity of a Green Pass |
+| 1 | Invalidation | Invalidate a Green Pass |
+| 2 | Validation | Validate a Green Pass |
+| 3 | Create request | Requests a Green Pass creation |
+| 4 | Creation | Creates a Green Pass |
+
+### Request data structure
+![Request data](req_data.png)
+
+### Response codes
+
+| Code | Name | Description
+| ----------- | ----------- | ----------- |
+| -3 | Server error | The server malfunctioned during the request|
+| -2 | Invalid data | The data sent is not valid |
+| -1 | Not implemented | The operation is not implemented |
+| 0 | Not valid | Green Pass is not valid |
+| 2 | Additional data | The request needs additional data |
+
