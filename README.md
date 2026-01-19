@@ -1,8 +1,8 @@
 # Green Pass
 This project implements a client/server architecture for managing Green Passes.
 
-## Architecture
-The Green Pass management xx this operations:
+## Description
+The Green Pass management provides this operations:
 - Creation
 - Validity check
 - Validation
