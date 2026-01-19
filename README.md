@@ -54,5 +54,6 @@ In case of a request that needs additional data to be sent:
 | -2 | Invalid data | The data sent is not valid |
 | -1 | Not implemented | The operation is not implemented |
 | 0 | Not valid | Green Pass is not valid |
-| 1 | Additional data | The request needs additional data |
+| 1 | Valid | Green Pass is valid |
+| 2 | Additional data | The request needs additional data |
 
