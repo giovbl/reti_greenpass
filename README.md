@@ -17,6 +17,6 @@ validity from ServerV.
 
 Similar to the Green Pass verification phase, in both the validation/invalidation the client send the fiscal code to ServerG, which will request validation and invalidation from ServerV. 
 
-The project implements a single client (for both the user and the vaccianl centre) capable of requesting the four operations necessary for Green Pass's management.
+The project implements a single client (for both the user and the vaccinal centre) capable of requesting the four operations necessary for Green Pass's management.
 
 ![Architecture visualization](architecture.png)
