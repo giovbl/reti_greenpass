@@ -1,7 +1,17 @@
 # Green Pass
+
+- 1.0) [Introduction](#10-introduction)
+- 2.0) [Description](#20-description)
+- 3.0) [Protocol](#30-protocol)
+    - 3.1) [Request](#31-request)
+      - 3.1.1) [Request codes](#311-request-codes)
+      - 3.1.2) [Request data structure](#312-request-data-structure)
+    - 3.2) [Response codes](#32-response-codes)
+
+## 1.0) Introduction
 This project implements a client/server architecture for managing Green Passes.
 
-## Description
+## 2.0) Description
 The Green Pass management provides this operations:
 - Creation
 - Validity check
@@ -21,9 +31,9 @@ The project implements a single client (for both the user and the vaccinal centr
 
 ![Architecture visualization](architecture.png)
 
-## Protocol
+## 3.0) Protocol
 
-### Request
+### 3.1) Request
 A basic request operation performs this operations:
 
 ![Basic request](req_basic.png)
@@ -33,7 +43,7 @@ In case of a request that needs additional data to be sent:
 
 ![Extended request](req_extended.png)
 
-### Request codes
+#### 3.1.1) Request codes
 
 | Code | Name | Description
 | ----------- | ----------- | ----------- |
@@ -43,10 +53,10 @@ In case of a request that needs additional data to be sent:
 | 3 | Create request | Requests a Green Pass creation |
 | 4 | Creation | Creates a Green Pass |
 
-### Request data structure
+#### 3.1.2) Request data structure
 ![Request data](req_data.png)
 
-### Response codes
+### 3.2) Response codes
 
 | Code | Name | Description
 | ----------- | ----------- | ----------- |
