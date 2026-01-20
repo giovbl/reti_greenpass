@@ -7,7 +7,12 @@
       - 3.1.1) [Request codes](#311-request-codes)
       - 3.1.2) [Request data structure](#312-request-data-structure)
     - 3.2) [Response codes](#32-response-codes)
-- 4.0) [File strcture](#32-file-structure)
+- 4.0) [File structure](#40-file-structure)
+- 5.0) [Compile and execute](#50-compile-and-execute)
+    - 5.1) [Compile](#51-compile)
+    - 5.2) [Server execution](#52-server-execution)
+    - 5.3) [Vaccinal centre execution](#53-vaccinal-centre-execution)
+    - 5.4) [Client execution](#54-client-execution)
 
 ## 1.0) Introduction
 This project implements a client/server architecture for managing Green Passes.
@@ -28,7 +33,7 @@ validity from ServerV.
 
 Similar to the Green Pass verification phase, in both the validation/invalidation the client send the fiscal code to ServerG, which will request validation and invalidation from ServerV. 
 
-The project implements a single client (for both the user and the vaccinal centre) capable of requesting the four operations necessary for Green Pass's management.
+The project implements a single protocol (for both the user and the vaccinal centre) capable of requesting the four operations necessary for Green Pass's management.
 
 ![Architecture visualization](architecture.png)
 
@@ -74,3 +79,33 @@ In case of a request that needs additional data to be sent:
 Green Passes are memorized in a file, using a table structure with fixed sizes.
 
 ![File structure](file_structure.png)
+
+## 5.0) Compile and execute
+
+### 5.1) Compile
+The entire project can be complied using the _compile.sh_ script:
+``./compile.sh``
+
+### 5.2) Server execution
+Servers can be started with this commands:
+``
+./serverG
+./serverV
+``
+### 5.3) Vaccinal centre execution
+A vaccinal centre can be started this way:
+``
+./centro vaccinale [port number]
+``
+The inserted port number will be necessary for enshablishing a connection with the vaccinal centre
+
+### 5.4) Client execution
+Client requests can be performed using this command:
+``
+./centro vaccinale [operation code] [fiscal code] [port number]
+``
+
+
+
+
+
