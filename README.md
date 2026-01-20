@@ -32,6 +32,8 @@ The project implements a single client (for both the user and the vaccinal centr
 ![Architecture visualization](architecture.png)
 
 ## 3.0) Protocol
+Communication in both client-server and server-server, utilize a common protocol.
+It is implemented as a TCP protocol.
 
 ### 3.1) Request
 A basic request operation performs this operations:
@@ -66,4 +68,3 @@ In case of a request that needs additional data to be sent:
 | 0 | Not valid | Green Pass is not valid |
 | 1 | Valid | Green Pass is valid |
 | 2 | Additional data | The request needs additional data |
-
