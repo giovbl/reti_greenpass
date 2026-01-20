@@ -7,6 +7,7 @@
       - 3.1.1) [Request codes](#311-request-codes)
       - 3.1.2) [Request data structure](#312-request-data-structure)
     - 3.2) [Response codes](#32-response-codes)
+- 4.0) [File strcture](#32-file-structure)
 
 ## 1.0) Introduction
 This project implements a client/server architecture for managing Green Passes.
@@ -68,3 +69,8 @@ In case of a request that needs additional data to be sent:
 | 0 | Not valid | Green Pass is not valid |
 | 1 | Valid | Green Pass is valid |
 | 2 | Additional data | The request needs additional data |
+
+## 4.0) File structure
+Green Passes are memorized in a file, using a table structure with fixed sizes.
+
+![File structure](file_structure.png)
